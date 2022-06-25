@@ -1,8 +1,8 @@
 import Box from '@mui/material/Box';
 import ArticleCardButton from './ArticleCardButton';
-function App({ imgSrc, title, newsSource, desc,imgWidth, height }) {
+function App({ imgSrc, title, newsSource, desc,style}) {
   return (
-    <Box className="article-card grid-item" sx={{ width:imgWidth, height,display:'flex' ,flexDirection:'column',fontFamily: '\'PT Sans\', sans-serif'}}>
+    <Box className="article-card grid-item" sx={{...{  display:'flex' ,flexDirection:'column',fontFamily: '\'PT Sans\', sans-serif'}, ...style}}>
       <Box component="img" className='article-image' src={imgSrc} sx={{ borderRadius: '6px 6px 0 0', width: '100%' }}></Box>
       <Box className="details" sx={{backgroundColor:'#FCFEFE', px:'2rem'}}>
         <Box component="p" sx={{fontWeight:'bold',fontSize:'1rem',}} className="article-title">{title}</Box>
